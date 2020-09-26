@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.ppsr.gov.au/2015/02/services" elementFormDefault="qualified" targetNamespace="http://schemas.ppsr.gov.au/2015/02/services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schemas.ppsr.gov.au.2016.05.services.xsd" namespace="http://schemas.ppsr.gov.au/2016/05/services" />
+  <xs:element name="DeleteMessagesResponseMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.ppsr.gov.au/2016/05/services" minOccurs="0" ref="q1:DeleteMessagesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

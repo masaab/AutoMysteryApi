@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1bfdcb67-b9fd-44a5-b907-b6f2a4158b51" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\OfficeDevelopment\CarMystery\AutoMystery.PPSRService\WSDL\schemas.ppsr.gov.au.2016.05.services.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="schemas.xsd" MetadataType="Schema" ID="0326a959-71bc-471d-9e28-469a333b4e33" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2015.02.data.xsd" />
+    <MetadataFile FileName="schemas1.xsd" MetadataType="Schema" ID="a859b7b1-66b6-47d7-bb04-c8dd095d9219" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2016.05.services.xsd" />
+    <MetadataFile FileName="schemas2.xsd" MetadataType="Schema" ID="d5f012d4-380c-4c89-85c9-36e66583fc07" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.faults.xsd" />
+    <MetadataFile FileName="schemas3.xsd" MetadataType="Schema" ID="299ef8f8-2c3d-48e3-9c4e-73e721676b83" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+    <MetadataFile FileName="schemas4.xsd" MetadataType="Schema" ID="17103df9-82ed-4dcc-867d-085d3d163d47" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2016.05.data.xsd" />
+    <MetadataFile FileName="schemas5.xsd" MetadataType="Schema" ID="bc48f6ea-bc75-4459-9a01-11ad03cd5b95" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2015.02.services.xsd" />
+    <MetadataFile FileName="schemas6.xsd" MetadataType="Schema" ID="dfeae0fc-11d3-4c31-bf5a-64984f6a405e" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2011.04.data.xsd" />
+    <MetadataFile FileName="Ppsr_2016_05.wsdl" MetadataType="Wsdl" ID="2a245cba-d9ef-4e48-a23a-35147d70f8ba" SourceId="1" SourceUrl="file:///C:/OfficeDevelopment/CarMystery/AutoMystery.PPSRService/WSDL/schemas.ppsr.gov.au.2016.05.services.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

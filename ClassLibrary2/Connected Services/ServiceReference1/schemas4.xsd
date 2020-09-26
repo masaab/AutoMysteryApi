@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.ppsr.gov.au/2016/05/data" elementFormDefault="qualified" targetNamespace="http://schemas.ppsr.gov.au/2016/05/data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schemas.ppsr.gov.au.2015.02.data.xsd" namespace="http://schemas.ppsr.gov.au/2015/02/data" />
+  <xs:import schemaLocation="schemas.ppsr.gov.au.2011.04.data.xsd" namespace="http://schemas.ppsr.gov.au/2011/04/data" />
+  <xs:import schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CreateAlertNotificationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.ppsr.gov.au/2015/02/data" name="AlertGrantorOrganisations" nillable="true" type="q1:ArrayOfAlertGrantorOrganisation" />
+          <xs:element name="AlertNotificationEndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAlertNotificationRequestType" nillable="true" type="tns:CreateAlertNotificationRequestType" />
+  <xs:complexType name="CommonRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonB2GMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CCAddressDetail" nillable="true" type="tns:NotificationAddressDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommonRequestType" nillable="true" type="tns:CommonRequestType" />
+  <xs:complexType name="CommonB2GMessageType">
+    <xs:sequence>
+      <xs:element name="CustomersRequestMessageId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.ppsr.gov.au/2011/04/data" name="CustomersUserDefinedFields" nillable="true" type="q2:ArrayOfCustomersUserDefinedField" />
+      <xs:element minOccurs="0" name="BillingReferenceNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonB2GMessageType" nillable="true" type="tns:CommonB2GMessageType" />
+  <xs:complexType name="NotificationAddressDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="B2GMailboxAccountCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationAddressDetail" nillable="true" type="tns:NotificationAddressDetail" />
+  <xs:complexType name="RetrieveAlertNotificationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="AlertNotificationRequestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAlertNotificationRequestType" nillable="true" type="tns:RetrieveAlertNotificationRequestType" />
+  <xs:complexType name="SearchBySerialNumberRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q3:SearchBySerialNumberSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchBySerialNumberRequestType" nillable="true" type="tns:SearchBySerialNumberRequestType" />
+  <xs:complexType name="SearchByGrantorRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptGrantorIndividualSearchDeclaration" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q4:SearchByGrantorSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByGrantorRequestType" nillable="true" type="tns:SearchByGrantorRequestType" />
+  <xs:complexType name="RetrieveAlertNotificationsRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAlertNotificationsRequestType" nillable="true" type="tns:RetrieveAlertNotificationsRequestType" />
+  <xs:complexType name="SearchByGrantorAndEventDateRangeRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptGrantorIndividualSearchDeclaration" type="xs:boolean" />
+          <xs:element xmlns:q5="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q5:SearchByGrantorAndEventDateRangeSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByGrantorAndEventDateRangeRequestType" nillable="true" type="tns:SearchByGrantorAndEventDateRangeRequestType" />
+  <xs:complexType name="CreateRegistrationsRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralType" type="q6:NewRegistrationCollateralType" />
+          <xs:element xmlns:q7="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="Grantors" nillable="true" type="q7:ArrayOfNewGrantor" />
+          <xs:element name="IsTransitional" type="xs:boolean" />
+          <xs:element xmlns:q8="http://schemas.ppsr.gov.au/2011/04/data" name="NewRegistrations" nillable="true" type="q8:ArrayOfNewCollateralRegistration" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRegistrationsRequestType" nillable="true" type="tns:CreateRegistrationsRequestType" />
+  <xs:complexType name="RetrieveRegistrationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationRequestType" nillable="true" type="tns:RetrieveRegistrationRequestType" />
+  <xs:complexType name="AmendRegistrationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element xmlns:q9="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralRegistrationAmendments" nillable="true" type="q9:CollateralRegistrationAmendments" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AmendRegistrationRequestType" nillable="true" type="tns:AmendRegistrationRequestType" />
+  <xs:complexType name="DischargeRegistrationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DischargeRegistrationRequestType" nillable="true" type="tns:DischargeRegistrationRequestType" />
+  <xs:complexType name="ResetRegistrationTokenRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetRegistrationTokenRequestType" nillable="true" type="tns:ResetRegistrationTokenRequestType" />
+  <xs:complexType name="ReissueVerificationStatementRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReissueVerificationStatementRequestType" nillable="true" type="tns:ReissueVerificationStatementRequestType" />
+  <xs:complexType name="TransferSingleRegistrationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransferFromSecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="TransferFromSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+          <xs:element name="TransferToSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferSingleRegistrationRequestType" nillable="true" type="tns:TransferSingleRegistrationRequestType" />
+  <xs:complexType name="TransferAllRegistrationsRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompletionNotificationEmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransferFromSecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="TransferFromSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+          <xs:element name="TransferToSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferAllRegistrationsRequestType" nillable="true" type="tns:TransferAllRegistrationsRequestType" />
+  <xs:complexType name="UploadRegistrationAttachmentRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="Attachment" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="AttachmentDescription" nillable="true" type="xs:string" />
+          <xs:element name="AttachmentFileName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UploadRegistrationAttachmentRequestType" nillable="true" type="tns:UploadRegistrationAttachmentRequestType" />
+  <xs:complexType name="RetrieveRegistrationAttachmentRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="AttachmentId" type="xs:long" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationAttachmentRequestType" nillable="true" type="tns:RetrieveRegistrationAttachmentRequestType" />
+  <xs:complexType name="CreateSecuredPartyGroupRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.ppsr.gov.au/2011/04/data" name="AddressForService" nillable="true" type="q10:NewAddressForService" />
+          <xs:element xmlns:q11="http://schemas.ppsr.gov.au/2011/04/data" name="SecuredParties" nillable="true" type="q11:ArrayOfNewSecuredParty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateSecuredPartyGroupRequestType" nillable="true" type="tns:CreateSecuredPartyGroupRequestType" />
+  <xs:complexType name="RetrieveSecuredPartyGroupRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSecuredPartyGroupRequestType" nillable="true" type="tns:RetrieveSecuredPartyGroupRequestType" />
+  <xs:complexType name="UpdateSecuredPartyGroupRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="ReverifySecuredParties" nillable="true" type="q12:ArrayOfReverifySecuredParty" />
+          <xs:element name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupVersionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdatedAddressForService" nillable="true" type="tns:UpdatedAddressForService" />
+          <xs:element xmlns:q13="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="UpdatedSecuredParties" nillable="true" type="q13:ArrayOfUpdatedSecuredParty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateSecuredPartyGroupRequestType" nillable="true" type="tns:UpdateSecuredPartyGroupRequestType" />
+  <xs:complexType name="UpdatedAddressForService">
+    <xs:sequence>
+      <xs:element name="AddressForService" nillable="true" type="tns:NewAddressForServiceWithAdditionalNotificationAddresses" />
+      <xs:element minOccurs="0" name="CompletionNotificationEmailAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdatedAddressForService" nillable="true" type="tns:UpdatedAddressForService" />
+  <xs:complexType name="NewAddressForServiceWithAdditionalNotificationAddresses">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.ppsr.gov.au/2011/04/data" base="q14:NewAddressForService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdditionalNotificationAddressDetails" nillable="true" type="tns:ArrayOfAdditionalNotificationAddressDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewAddressForServiceWithAdditionalNotificationAddresses" nillable="true" type="tns:NewAddressForServiceWithAdditionalNotificationAddresses" />
+  <xs:complexType name="ArrayOfAdditionalNotificationAddressDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalNotificationAddressDetail" nillable="true" type="tns:AdditionalNotificationAddressDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdditionalNotificationAddressDetail" nillable="true" type="tns:ArrayOfAdditionalNotificationAddressDetail" />
+  <xs:complexType name="AdditionalNotificationAddressDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NotificationAddressDetail">
+        <xs:sequence>
+          <xs:element name="IsSendToCCAddressAllowed" type="xs:boolean" />
+          <xs:element name="NotificationCategory" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AdditionalNotificationAddressDetail" nillable="true" type="tns:AdditionalNotificationAddressDetail" />
+  <xs:complexType name="ResetAccessCodeRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetAccessCodeRequestType" nillable="true" type="tns:ResetAccessCodeRequestType" />
+  <xs:complexType name="ChangeAccessCodeRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="CurrentSecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="NewSecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangeAccessCodeRequestType" nillable="true" type="tns:ChangeAccessCodeRequestType" />
+  <xs:complexType name="RetrieveSecuredPartyGroupHistoryRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSecuredPartyGroupHistoryRequestType" nillable="true" type="tns:RetrieveSecuredPartyGroupHistoryRequestType" />
+  <xs:complexType name="SearchByRegistrationNumberRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q15:SearchByRegistrationNumberSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByRegistrationNumberRequestType" nillable="true" type="tns:SearchByRegistrationNumberRequestType" />
+  <xs:complexType name="RetrieveSearchCertificateRegistrationAttachmentRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="AttachmentId" type="xs:long" />
+          <xs:element name="SearchCertificateNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchCertificateRegistrationAttachmentRequestType" nillable="true" type="tns:RetrieveSearchCertificateRegistrationAttachmentRequestType" />
+  <xs:complexType name="RetrieveMessagesRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChangeNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="GivingOfNoticeIdentifier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncludePreviouslyRetrievedMessages" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MessagesAddedFromDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MessagesAddedToDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MessagesAfterMessageId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="MessagesBeforeMessageId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NotificationType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalCustomersRequestMessageId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMessagesRequestType" nillable="true" type="tns:RetrieveMessagesRequestType" />
+  <xs:complexType name="RetrieveSearchResultRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchResultRequestType" nillable="true" type="tns:RetrieveSearchResultRequestType" />
+  <xs:complexType name="RetrieveSearchResultRegistrationAttachmentRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="AttachmentId" type="xs:long" />
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchResultRegistrationAttachmentRequestType" nillable="true" type="tns:RetrieveSearchResultRegistrationAttachmentRequestType" />
+  <xs:complexType name="RetrieveGrantorSearchResultDetailRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="FilterNumber" type="xs:int" />
+          <xs:element name="MaximumNumberOfRegistrationsToReturn" type="xs:int" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+          <xs:element name="StartResultSequenceNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveGrantorSearchResultDetailRequestType" nillable="true" type="tns:RetrieveGrantorSearchResultDetailRequestType" />
+  <xs:complexType name="FilterGrantorSearchResultRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.ppsr.gov.au/2011/04/data" name="FilterCriteria" nillable="true" type="q16:SearchByGrantorFilterCriteria" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilterGrantorSearchResultRequestType" nillable="true" type="tns:FilterGrantorSearchResultRequestType" />
+  <xs:complexType name="FilterGrantorAndEventDateRangeSearchResultRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.ppsr.gov.au/2011/04/data" name="FilterCriteria" nillable="true" type="q17:SearchByGrantorAndEventDateRangeFilterCriteria" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilterGrantorAndEventDateRangeSearchResultRequestType" nillable="true" type="tns:FilterGrantorAndEventDateRangeSearchResultRequestType" />
+  <xs:complexType name="RetrieveRegistrationHistoryDetailRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationHistoryDetailRequestType" nillable="true" type="tns:RetrieveRegistrationHistoryDetailRequestType" />
+  <xs:complexType name="RequestSearchCertificateRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChangeNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestSearchCertificateRequestType" nillable="true" type="tns:RequestSearchCertificateRequestType" />
+  <xs:complexType name="RetrieveSearchCertificateRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="SearchCertificateNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchCertificateRequestType" nillable="true" type="tns:RetrieveSearchCertificateRequestType" />
+  <xs:complexType name="ChangeB2GPasswordRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangeB2GPasswordRequestType" nillable="true" type="tns:ChangeB2GPasswordRequestType" />
+  <xs:complexType name="OrdinalSearchRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q18:OrdinalSearchSearchCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdinalSearchRequestType" nillable="true" type="tns:OrdinalSearchRequestType" />
+  <xs:complexType name="RetrieveMessagePdfRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="B2GMailboxMessageId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMessagePdfRequestType" nillable="true" type="tns:RetrieveMessagePdfRequestType" />
+  <xs:complexType name="DeleteMessagesRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ToDeleteMessageIds" nillable="true" type="q19:ArrayOflong" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteMessagesRequestType" nillable="true" type="tns:DeleteMessagesRequestType" />
+  <xs:complexType name="PingRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PingRequestType" nillable="true" type="tns:PingRequestType" />
+  <xs:complexType name="RetrieveReportSummariesRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReportNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReportType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveReportSummariesRequestType" nillable="true" type="tns:RetrieveReportSummariesRequestType" />
+  <xs:complexType name="CancelAlertNotificationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="AlertNotificationRequestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CancelAlertNotificationRequestType" nillable="true" type="tns:CancelAlertNotificationRequestType" />
+  <xs:complexType name="RetrieveReportRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ReportNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveReportRequestType" nillable="true" type="tns:RetrieveReportRequestType" />
+  <xs:complexType name="RequestReportRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ReportCriteria" nillable="true">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element xmlns:q20="http://schemas.ppsr.gov.au/2011/04/data" name="ReportFormat" type="q20:ReportFormatType" />
+          <xs:element minOccurs="0" name="ReportReadyNotificationEmailAddress" nillable="true" type="xs:string" />
+          <xs:element name="ReportType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestReportRequestType" nillable="true" type="tns:RequestReportRequestType" />
+  <xs:complexType name="DeleteReportRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ReportNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteReportRequestType" nillable="true" type="tns:DeleteReportRequestType" />
+  <xs:complexType name="AmendAlertNotificationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element xmlns:q21="http://schemas.ppsr.gov.au/2015/02/data" minOccurs="0" name="AddedGrantorOrganisations" nillable="true" type="q21:ArrayOfAlertGrantorOrganisation" />
+          <xs:element minOccurs="0" name="AlertNotificationEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element name="AlertNotificationRequestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewB2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewEmailAddress" nillable="true" type="xs:string" />
+          <xs:element xmlns:q22="http://schemas.ppsr.gov.au/2015/02/data" minOccurs="0" name="RemovedGrantorOrganisations" nillable="true" type="q22:ArrayOfAlertGrantorOrganisation" />
+          <xs:element xmlns:q23="http://schemas.ppsr.gov.au/2015/02/data" minOccurs="0" name="ReverifyGrantorOrganisations" nillable="true" type="q23:ArrayOfAlertGrantorOrganisation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AmendAlertNotificationRequestType" nillable="true" type="tns:AmendAlertNotificationRequestType" />
+  <xs:complexType name="CreateAlertNotificationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q24="http://schemas.ppsr.gov.au/2015/02/data" name="AlertNotificationRequest" nillable="true" type="q24:AlertNotificationRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAlertNotificationResponseType" nillable="true" type="tns:CreateAlertNotificationResponseType" />
+  <xs:complexType name="CommonResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonB2GMessageType">
+        <xs:sequence>
+          <xs:element name="PpsrRequestMessageId" type="xs:long" />
+          <xs:element name="RequestProcessedByEnvironment" nillable="true" type="xs:string" />
+          <xs:element name="RequestProcessedDateTime" type="xs:dateTime" />
+          <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PpsrResponseMessages" nillable="true" type="q25:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommonResponseType" nillable="true" type="tns:CommonResponseType" />
+  <xs:complexType name="RetrieveRegistrationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.ppsr.gov.au/2015/02/data" name="CollateralRegistration" nillable="true" type="q26:CollateralRegistration" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationResponseType" nillable="true" type="tns:RetrieveRegistrationResponseType" />
+  <xs:complexType name="RetrieveSearchCertificateResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="AccessToSearchCertificateExpiryTime" type="xs:dateTime" />
+          <xs:element xmlns:q27="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="Attachments" nillable="true" type="q27:ArrayOfAttachmentDetail" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element minOccurs="0" name="SearchCertificateCreatedDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SearchCertificateFile" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SearchCertificateFileName" nillable="true" type="xs:string" />
+          <xs:element name="SearchCertificateNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchCertificateResponseType" nillable="true" type="tns:RetrieveSearchCertificateResponseType" />
+  <xs:complexType name="SearchBySerialNumberResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q28="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q28:SearchBySerialNumberSearchCriteria" />
+          <xs:element xmlns:q29="http://schemas.ppsr.gov.au/2015/02/data" name="SearchResult" nillable="true" type="q29:SearchBySerialNumberSearchResult" />
+          <xs:element xmlns:q30="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q30:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchBySerialNumberResponseType" nillable="true" type="tns:SearchBySerialNumberResponseType" />
+  <xs:complexType name="RetrieveAlertNotificationsResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAlertNotificationsResponseType" nillable="true" type="tns:RetrieveAlertNotificationsResponseType" />
+  <xs:complexType name="CreateRegistrationsResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q31="http://schemas.ppsr.gov.au/2011/04/data" name="Registrations" nillable="true" type="q31:ArrayOfRegistrationInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRegistrationsResponseType" nillable="true" type="tns:CreateRegistrationsResponseType" />
+  <xs:complexType name="AmendRegistrationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="IsRegistrationEndTimeChanged" type="xs:boolean" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="RegistrationChangeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RegistrationEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AmendRegistrationResponseType" nillable="true" type="tns:AmendRegistrationResponseType" />
+  <xs:complexType name="DischargeRegistrationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="RegistrationEndTime" type="xs:dateTime" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DischargeRegistrationResponseType" nillable="true" type="tns:DischargeRegistrationResponseType" />
+  <xs:complexType name="ResetRegistrationTokenResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetRegistrationTokenResponseType" nillable="true" type="tns:ResetRegistrationTokenResponseType" />
+  <xs:complexType name="ReissueVerificationStatementResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReissueVerificationStatementResponseType" nillable="true" type="tns:ReissueVerificationStatementResponseType" />
+  <xs:complexType name="TransferSingleRegistrationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChangeNumber" type="xs:long" />
+          <xs:element name="IsAccessIsRestricted" type="xs:boolean" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="RegistrationChangeTime" type="xs:dateTime" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferSingleRegistrationResponseType" nillable="true" type="tns:TransferSingleRegistrationResponseType" />
+  <xs:complexType name="TransferAllRegistrationsResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumberOfCurrentRegistrations" type="xs:int" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferAllRegistrationsResponseType" nillable="true" type="tns:TransferAllRegistrationsResponseType" />
+  <xs:complexType name="UploadRegistrationAttachmentResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="AttachmentId" type="xs:long" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UploadRegistrationAttachmentResponseType" nillable="true" type="tns:UploadRegistrationAttachmentResponseType" />
+  <xs:complexType name="RetrieveRegistrationAttachmentResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="Attachment" nillable="true" type="xs:base64Binary" />
+          <xs:element name="AttachmentFileName" nillable="true" type="xs:string" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationAttachmentResponseType" nillable="true" type="tns:RetrieveRegistrationAttachmentResponseType" />
+  <xs:complexType name="CreateSecuredPartyGroupResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateSecuredPartyGroupResponseType" nillable="true" type="tns:CreateSecuredPartyGroupResponseType" />
+  <xs:complexType name="RetrieveSecuredPartyGroupResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="SecuredPartyGroup" nillable="true" type="tns:SecuredPartyGroupWithVerification" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSecuredPartyGroupResponseType" nillable="true" type="tns:RetrieveSecuredPartyGroupResponseType" />
+  <xs:complexType name="SecuredPartyGroupWithVerification">
+    <xs:sequence>
+      <xs:element name="AddressForService" nillable="true" type="tns:AddressForServiceWithAdditionalNotificationAddresses" />
+      <xs:element xmlns:q32="http://schemas.ppsr.gov.au/2011/04/data" name="SecuredParties" nillable="true" type="q32:ArrayOfSecuredPartyWithVerification" />
+      <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+      <xs:element name="SecuredPartyGroupVersionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecuredPartyGroupWithVerification" nillable="true" type="tns:SecuredPartyGroupWithVerification" />
+  <xs:complexType name="AddressForServiceWithAdditionalNotificationAddresses">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.ppsr.gov.au/2011/04/data" base="q33:AddressForService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdditionalNotificationAddressDetails" nillable="true" type="tns:ArrayOfAdditionalNotificationAddressDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressForServiceWithAdditionalNotificationAddresses" nillable="true" type="tns:AddressForServiceWithAdditionalNotificationAddresses" />
+  <xs:complexType name="UpdateSecuredPartyGroupResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateSecuredPartyGroupResponseType" nillable="true" type="tns:UpdateSecuredPartyGroupResponseType" />
+  <xs:complexType name="ResetAccessCodeResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetAccessCodeResponseType" nillable="true" type="tns:ResetAccessCodeResponseType" />
+  <xs:complexType name="ChangeAccessCodeResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangeAccessCodeResponseType" nillable="true" type="tns:ChangeAccessCodeResponseType" />
+  <xs:complexType name="RetrieveSecuredPartyGroupHistoryResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q34="http://schemas.ppsr.gov.au/2011/04/data" name="SecuredPartyGroupHistory" nillable="true" type="q34:ArrayOfSecuredPartyGroupChange" />
+          <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSecuredPartyGroupHistoryResponseType" nillable="true" type="tns:RetrieveSecuredPartyGroupHistoryResponseType" />
+  <xs:complexType name="SearchByRegistrationNumberResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q35="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q35:SearchByRegistrationNumberSearchCriteria" />
+          <xs:element xmlns:q36="http://schemas.ppsr.gov.au/2015/02/data" name="SearchResult" nillable="true" type="q36:SearchByRegistrationNumberSearchResult" />
+          <xs:element xmlns:q37="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q37:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByRegistrationNumberResponseType" nillable="true" type="tns:SearchByRegistrationNumberResponseType" />
+  <xs:complexType name="SearchByGrantorResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q38="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q38:SearchByGrantorSearchCriteria" />
+          <xs:element xmlns:q39="http://schemas.ppsr.gov.au/2011/04/data" name="SearchResult" nillable="true" type="q39:SearchByGrantorSearchResult" />
+          <xs:element xmlns:q40="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q40:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByGrantorResponseType" nillable="true" type="tns:SearchByGrantorResponseType" />
+  <xs:complexType name="SearchByGrantorAndEventDateRangeResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q41="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q41:SearchByGrantorAndEventDateRangeSearchCriteria" />
+          <xs:element xmlns:q42="http://schemas.ppsr.gov.au/2011/04/data" name="SearchResult" nillable="true" type="q42:SearchByGrantorSearchResult" />
+          <xs:element xmlns:q43="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q43:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchByGrantorAndEventDateRangeResponseType" nillable="true" type="tns:SearchByGrantorAndEventDateRangeResponseType" />
+  <xs:complexType name="OrdinalSearchResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q44="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q44:OrdinalSearchSearchCriteria" />
+          <xs:element xmlns:q45="http://schemas.ppsr.gov.au/2015/02/data" name="SearchResult" nillable="true" type="q45:OrdinalSearchSearchResult" />
+          <xs:element xmlns:q46="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q46:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdinalSearchResponseType" nillable="true" type="tns:OrdinalSearchResponseType" />
+  <xs:complexType name="RetrieveSearchResultResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element xmlns:q47="http://schemas.ppsr.gov.au/2011/04/data" name="SearchCriteria" nillable="true" type="q47:SearchCriteria" />
+          <xs:element xmlns:q48="http://schemas.ppsr.gov.au/2015/02/data" name="SearchResult" nillable="true" type="q48:SearchResult" />
+          <xs:element xmlns:q49="http://schemas.ppsr.gov.au/2015/02/data" name="SearchSummary" nillable="true" type="q49:SearchSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchResultResponseType" nillable="true" type="tns:RetrieveSearchResultResponseType" />
+  <xs:complexType name="RetrieveSearchResultRegistrationAttachmentResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attachment" nillable="true" type="xs:base64Binary" />
+          <xs:element name="AttachmentFileName" nillable="true" type="xs:string" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchResultRegistrationAttachmentResponseType" nillable="true" type="tns:RetrieveSearchResultRegistrationAttachmentResponseType" />
+  <xs:complexType name="RetrieveGrantorSearchResultDetailResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="ResultCount" type="xs:int" />
+          <xs:element xmlns:q50="http://schemas.ppsr.gov.au/2015/02/data" minOccurs="0" name="ResultDetails" nillable="true" type="q50:ArrayOfResultDetail" />
+          <xs:element name="SearchResultDetailRetrievedDateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveGrantorSearchResultDetailResponseType" nillable="true" type="tns:RetrieveGrantorSearchResultDetailResponseType" />
+  <xs:complexType name="FilterGrantorSearchResultResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q51="http://schemas.ppsr.gov.au/2011/04/data" name="FilterCriteria" nillable="true" type="q51:SearchByGrantorFilterCriteria" />
+          <xs:element xmlns:q52="http://schemas.ppsr.gov.au/2011/04/data" name="FilterSummary" nillable="true" type="q52:FilterSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilterGrantorSearchResultResponseType" nillable="true" type="tns:FilterGrantorSearchResultResponseType" />
+  <xs:complexType name="FilterGrantorAndEventDateRangeSearchResultResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q53="http://schemas.ppsr.gov.au/2011/04/data" name="FilterCriteria" nillable="true" type="q53:SearchByGrantorAndEventDateRangeFilterCriteria" />
+          <xs:element xmlns:q54="http://schemas.ppsr.gov.au/2011/04/data" name="FilterSummary" nillable="true" type="q54:FilterSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FilterGrantorAndEventDateRangeSearchResultResponseType" nillable="true" type="tns:FilterGrantorAndEventDateRangeSearchResultResponseType" />
+  <xs:complexType name="RetrieveRegistrationHistoryDetailResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q55="http://schemas.ppsr.gov.au/2015/02/data" name="ResultDetail" nillable="true" type="q55:ResultDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveRegistrationHistoryDetailResponseType" nillable="true" type="tns:RetrieveRegistrationHistoryDetailResponseType" />
+  <xs:complexType name="RequestSearchCertificateResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="AccessToSearchCertificateExpiryTime" type="xs:dateTime" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="SearchCertificateNumber" nillable="true" type="xs:string" />
+          <xs:element name="SearchCertificateRequestedDateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestSearchCertificateResponseType" nillable="true" type="tns:RequestSearchCertificateResponseType" />
+  <xs:complexType name="RetrieveSearchCertificateRegistrationAttachmentResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="Attachment" nillable="true" type="xs:base64Binary" />
+          <xs:element name="AttachmentFileName" nillable="true" type="xs:string" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveSearchCertificateRegistrationAttachmentResponseType" nillable="true" type="tns:RetrieveSearchCertificateRegistrationAttachmentResponseType" />
+  <xs:complexType name="RetrieveMessagesResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q56="http://schemas.ppsr.gov.au/2011/04/data" name="MailboxMessages" nillable="true" type="q56:ArrayOfB2GMailboxMessage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMessagesResponseType" nillable="true" type="tns:RetrieveMessagesResponseType" />
+  <xs:complexType name="RetrieveMessagePdfResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q57="http://schemas.ppsr.gov.au/2011/04/data" name="B2GMailboxPdfMessage" nillable="true" type="q57:B2GMailboxPdfMessage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveMessagePdfResponseType" nillable="true" type="tns:RetrieveMessagePdfResponseType" />
+  <xs:complexType name="DeleteMessagesResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="DeletedMessageIds" nillable="true" type="q58:ArrayOflong" />
+          <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="NotDeletedMessageIds" nillable="true" type="q59:ArrayOflong" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteMessagesResponseType" nillable="true" type="tns:DeleteMessagesResponseType" />
+  <xs:complexType name="PingResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Extension" nillable="true">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PingResponseType" nillable="true" type="tns:PingResponseType" />
+  <xs:complexType name="ChangeB2GPasswordResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PasswordExpiryDateTime" type="xs:dateTime" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangeB2GPasswordResponseType" nillable="true" type="tns:ChangeB2GPasswordResponseType" />
+  <xs:complexType name="RequestReportResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="ReportNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestReportResponseType" nillable="true" type="tns:RequestReportResponseType" />
+  <xs:complexType name="RetrieveReportResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element minOccurs="0" name="ReportExpiryDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReportFile" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="ReportFileName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q60="http://schemas.ppsr.gov.au/2011/04/data" name="ReportFormat" type="q60:ReportFormatType" />
+          <xs:element name="ReportNumber" nillable="true" type="xs:string" />
+          <xs:element name="ReportType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveReportResponseType" nillable="true" type="tns:RetrieveReportResponseType" />
+  <xs:complexType name="RetrieveReportSummariesResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q61="http://schemas.ppsr.gov.au/2011/04/data" name="ReportSummaries" nillable="true" type="q61:ArrayOfReportSummary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveReportSummariesResponseType" nillable="true" type="tns:RetrieveReportSummariesResponseType" />
+  <xs:complexType name="DeleteReportResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteReportResponseType" nillable="true" type="tns:DeleteReportResponseType" />
+  <xs:complexType name="AmendAlertNotificationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q62="http://schemas.ppsr.gov.au/2015/02/data" name="AlertNotificationRequest" nillable="true" type="q62:AlertNotificationRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AmendAlertNotificationResponseType" nillable="true" type="tns:AmendAlertNotificationResponseType" />
+  <xs:complexType name="CancelAlertNotificationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="AlertNotificationRequestNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CancelAlertNotificationResponseType" nillable="true" type="tns:CancelAlertNotificationResponseType" />
+  <xs:complexType name="RetrieveAlertNotificationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element xmlns:q63="http://schemas.ppsr.gov.au/2015/02/data" name="AlertNotificationRequest" nillable="true" type="q63:AlertNotificationRequest" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RetrieveAlertNotificationResponseType" nillable="true" type="tns:RetrieveAlertNotificationResponseType" />
+  <xs:complexType name="TransferMultipleRegistrationsRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompletionNotificationEmailAddress" nillable="true" type="xs:string" />
+          <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="RegistrationNumbers" nillable="true" type="q64:ArrayOfstring" />
+          <xs:element minOccurs="0" name="TransferFromSecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element name="TransferFromSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+          <xs:element name="TransferToSecuredPartyGroupNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferMultipleRegistrationsRequestType" nillable="true" type="tns:TransferMultipleRegistrationsRequestType" />
+  <xs:complexType name="TransferMultipleRegistrationsResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumberOfCurrentRegistrations" type="xs:int" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferMultipleRegistrationsResponseType" nillable="true" type="tns:TransferMultipleRegistrationsResponseType" />
+  <xs:complexType name="RegistrarOverrideAmendRegistrationRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element xmlns:q65="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralRegistrationAmendments" nillable="true" type="q65:CollateralRegistrationAmendments" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupAccessCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+          <xs:element xmlns:q66="http://schemas.ppsr.gov.au/2015/02/data" minOccurs="0" name="RegistrarOverride" nillable="true" type="q66:RegistrarOverride" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegistrarOverrideAmendRegistrationRequestType" nillable="true" type="tns:RegistrarOverrideAmendRegistrationRequestType" />
+  <xs:complexType name="RegistrarOverrideAmendRegistrationResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="ChangeNumber" type="xs:long" />
+          <xs:element name="IsRegistrationEndTimeChanged" type="xs:boolean" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="RegistrationChangeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RegistrationEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element name="RegistrarAlert" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegistrarOverrideAmendRegistrationResponseType" nillable="true" type="tns:RegistrarOverrideAmendRegistrationResponseType" />
+  <xs:complexType name="RequestSearchCertificatesRequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonRequestType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="B2gAccountCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationEmailAddress" nillable="true" type="xs:string" />
+          <xs:element xmlns:q67="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RegistrationNumbers" nillable="true" type="q67:ArrayOfstring" />
+          <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestSearchCertificatesRequestType" nillable="true" type="tns:RequestSearchCertificatesRequestType" />
+  <xs:complexType name="RequestSearchCertificatesResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonResponseType">
+        <xs:sequence>
+          <xs:element name="AccessToSearchCertificatesExpiryTime" type="xs:dateTime" />
+          <xs:element name="PpsrTransactionId" type="xs:long" />
+          <xs:element name="SearchCertificateDetails" nillable="true" type="tns:ArrayOfSearchCertificateDetail" />
+          <xs:element name="SearchCertificatesRequestedDateTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestSearchCertificatesResponseType" nillable="true" type="tns:RequestSearchCertificatesResponseType" />
+  <xs:complexType name="ArrayOfSearchCertificateDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchCertificateDetail" nillable="true" type="tns:SearchCertificateDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchCertificateDetail" nillable="true" type="tns:ArrayOfSearchCertificateDetail" />
+  <xs:complexType name="SearchCertificateDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element name="SearchCertificateNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCertificateDetail" nillable="true" type="tns:SearchCertificateDetail" />
+  <xs:complexType name="IsLaxSupportedResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IsLaxSupportedResponseType" nillable="true" type="tns:IsLaxSupportedResponseType" />
+</xs:schema>

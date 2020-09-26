@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.ppsr.gov.au/2015/02/data" elementFormDefault="qualified" targetNamespace="http://schemas.ppsr.gov.au/2015/02/data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="schemas.ppsr.gov.au.2011.04.data.xsd" namespace="http://schemas.ppsr.gov.au/2011/04/data" />
+  <xs:complexType name="ArrayOfAlertGrantorOrganisation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlertGrantorOrganisation" nillable="true" type="tns:AlertGrantorOrganisation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlertGrantorOrganisation" nillable="true" type="tns:ArrayOfAlertGrantorOrganisation" />
+  <xs:complexType name="AlertGrantorOrganisation">
+    <xs:sequence>
+      <xs:element name="OrganisationNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.ppsr.gov.au/2011/04/data" name="OrganisationNumberType" nillable="true" type="q1:OrganisationNumberType" />
+      <xs:element name="OrganisationSequenceNumber" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlertGrantorOrganisation" nillable="true" type="tns:AlertGrantorOrganisation" />
+  <xs:complexType name="CollateralRegistration">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.ppsr.gov.au/2011/04/data" name="AddressForService" nillable="true" type="q2:AddressForService" />
+      <xs:element xmlns:q3="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="AreAssetsSubjectToControl" nillable="true" type="q3:ExtendedBooleanType" />
+      <xs:element xmlns:q4="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="AreProceedsClaimed" nillable="true" type="q4:ExtendedBooleanType" />
+      <xs:element xmlns:q5="http://schemas.ppsr.gov.au/2011/04/data" name="Attachments" nillable="true" type="q5:ArrayOfAttachmentDetail" />
+      <xs:element name="ChangeNumber" type="xs:long" />
+      <xs:element xmlns:q6="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralClassType" type="q6:CollateralClassType" />
+      <xs:element minOccurs="0" name="CollateralDescription" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralType" type="q7:CollateralType" />
+      <xs:element minOccurs="0" name="EarlierRegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GivingOfNoticeIdentifier" nillable="true" type="xs:string" />
+      <xs:element name="Grantors" nillable="true" type="tns:ArrayOfGrantor" />
+      <xs:element xmlns:q8="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="IsInventory" nillable="true" type="q8:ExtendedBooleanType" />
+      <xs:element name="IsMigrated" type="xs:boolean" />
+      <xs:element xmlns:q9="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="IsPMSI" nillable="true" type="q9:ExtendedBooleanType" />
+      <xs:element minOccurs="0" name="IsRegistrationEndTimeNotStated" nillable="true" type="xs:boolean" />
+      <xs:element name="IsSecurityInterestRegistrationKind" type="xs:boolean" />
+      <xs:element name="IsSubordinate" type="xs:boolean" />
+      <xs:element name="IsTransitional" type="xs:boolean" />
+      <xs:element xmlns:q10="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="MigrationDetail" nillable="true" type="q10:MigrationDetail" />
+      <xs:element minOccurs="0" name="ProceedsClaimedDescription" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationChangeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegistrationEndTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="RegistrationKind" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationStartTime" type="xs:dateTime" />
+      <xs:element name="SecuredPartyGroup" nillable="true" type="tns:CollateralRegistrationSecuredPartyGroup" />
+      <xs:element xmlns:q11="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="SerialNumberDetails" nillable="true" type="q11:SerialisedCollateralDescription" />
+      <xs:element minOccurs="0" name="RegistrarAlert" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CollateralRegistration" nillable="true" type="tns:CollateralRegistration" />
+  <xs:complexType name="ArrayOfGrantor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Grantor" nillable="true" type="tns:Grantor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrantor" nillable="true" type="tns:ArrayOfGrantor" />
+  <xs:complexType name="Grantor">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.ppsr.gov.au/2011/04/data" name="GrantorType" type="q12:GrantorType" />
+      <xs:element xmlns:q13="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="Individual" nillable="true" type="q13:GrantorIndividual" />
+      <xs:element minOccurs="0" name="Organisation" nillable="true" type="tns:GrantorOrganisation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Grantor" nillable="true" type="tns:Grantor" />
+  <xs:complexType name="GrantorOrganisation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganisationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganisationNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q14="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="OrganisationNumberType" nillable="true" type="q14:OrganisationNumberType" />
+      <xs:element xmlns:q15="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="OrganisationNumberVerificationStatus" nillable="true" type="q15:IdentifierVerificationStatusType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantorOrganisation" nillable="true" type="tns:GrantorOrganisation" />
+  <xs:complexType name="CollateralRegistrationSecuredPartyGroup">
+    <xs:sequence>
+      <xs:element xmlns:q16="http://schemas.ppsr.gov.au/2011/04/data" name="SecuredParties" nillable="true" type="q16:ArrayOfCollateralRegistrationSecuredParty" />
+      <xs:element name="SecuredPartyGroupNumber" nillable="true" type="xs:string" />
+      <xs:element name="IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CollateralRegistrationSecuredPartyGroup" nillable="true" type="tns:CollateralRegistrationSecuredPartyGroup" />
+  <xs:complexType name="SearchBySerialNumberSearchResult">
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="NevdisData" nillable="true" type="q17:NevdisData" />
+      <xs:element minOccurs="0" name="ResultDetails" nillable="true" type="tns:ArrayOfResultDetail" />
+      <xs:element name="SearchResultRetrievedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransitionalPeriodMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchBySerialNumberSearchResult" nillable="true" type="tns:SearchBySerialNumberSearchResult" />
+  <xs:complexType name="ArrayOfResultDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultDetail" nillable="true" type="tns:ResultDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultDetail" nillable="true" type="tns:ArrayOfResultDetail" />
+  <xs:complexType name="ResultDetail">
+    <xs:sequence>
+      <xs:element xmlns:q18="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="ChangeHistory" nillable="true" type="q18:ChangeHistory" />
+      <xs:element minOccurs="0" name="RegistrationDetail" nillable="true" type="tns:RegistrationDetail" />
+      <xs:element xmlns:q19="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="RestrictionDetail" nillable="true" type="q19:RestrictionDetail" />
+      <xs:element minOccurs="0" name="ResultSequenceNumber" nillable="true" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultDetail" nillable="true" type="tns:ResultDetail" />
+  <xs:complexType name="RegistrationDetail">
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.ppsr.gov.au/2011/04/data" name="AddressForService" nillable="true" type="q20:AddressForService" />
+      <xs:element xmlns:q21="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="AreAssetsSubjectToControl" nillable="true" type="q21:ExtendedBooleanType" />
+      <xs:element xmlns:q22="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="AreProceedsClaimed" nillable="true" type="q22:ExtendedBooleanType" />
+      <xs:element xmlns:q23="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="Attachments" nillable="true" type="q23:ArrayOfAttachmentDetail" />
+      <xs:element name="ChangeNumber" type="xs:long" />
+      <xs:element name="CollateralClassDescription" nillable="true" type="xs:string" />
+      <xs:element xmlns:q24="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralClassType" type="q24:CollateralClassType" />
+      <xs:element minOccurs="0" name="CollateralDescription" nillable="true" type="xs:string" />
+      <xs:element xmlns:q25="http://schemas.ppsr.gov.au/2011/04/data" name="CollateralType" type="q25:CollateralType" />
+      <xs:element minOccurs="0" name="EarlierRegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GivingOfNoticeIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grantors" nillable="true" type="tns:ArrayOfGrantorSearchDetail" />
+      <xs:element xmlns:q26="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="IsInventory" nillable="true" type="q26:ExtendedBooleanType" />
+      <xs:element name="IsMigrated" type="xs:boolean" />
+      <xs:element xmlns:q27="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="IsPMSI" nillable="true" type="q27:ExtendedBooleanType" />
+      <xs:element name="IsSecurityInterestRegistrationKind" type="xs:boolean" />
+      <xs:element name="IsSubordinate" type="xs:boolean" />
+      <xs:element name="IsTransitional" type="xs:boolean" />
+      <xs:element xmlns:q28="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="MigrationDetail" nillable="true" type="q28:MigrationDetail" />
+      <xs:element minOccurs="0" name="ProceedsClaimedDescription" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationChangeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegistrationEndTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="RegistrationKind" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationNumber" nillable="true" type="xs:string" />
+      <xs:element name="RegistrationStartTime" type="xs:dateTime" />
+      <xs:element xmlns:q29="http://schemas.ppsr.gov.au/2011/04/data" name="SecuredParties" nillable="true" type="q29:ArrayOfCollateralRegistrationSecuredParty" />
+      <xs:element xmlns:q30="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="SerialNumberDetails" nillable="true" type="q30:SerialisedCollateralDescription" />
+      <xs:element minOccurs="0" name="RegistrarAlert" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrationDetail" nillable="true" type="tns:RegistrationDetail" />
+  <xs:complexType name="ArrayOfGrantorSearchDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GrantorSearchDetail" nillable="true" type="tns:GrantorSearchDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrantorSearchDetail" nillable="true" type="tns:ArrayOfGrantorSearchDetail" />
+  <xs:complexType name="GrantorSearchDetail">
+    <xs:sequence>
+      <xs:element xmlns:q31="http://schemas.ppsr.gov.au/2011/04/data" name="GrantorType" type="q31:GrantorType" />
+      <xs:element xmlns:q32="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="Individual" nillable="true" type="q32:GrantorIndividualSearchDetail" />
+      <xs:element minOccurs="0" name="Organisation" nillable="true" type="tns:GrantorOrganisation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantorSearchDetail" nillable="true" type="tns:GrantorSearchDetail" />
+  <xs:complexType name="SearchSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToSearchResultExpiryTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="ResultCount" type="xs:int" />
+      <xs:element name="SearchExecutedDateTime" type="xs:dateTime" />
+      <xs:element name="SearchNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q33="http://schemas.ppsr.gov.au/2011/04/data" name="SearchType" type="q33:SearchType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchSummary" nillable="true" type="tns:SearchSummary" />
+  <xs:complexType name="SearchByRegistrationNumberSearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultDetail" nillable="true" type="tns:ResultDetail" />
+      <xs:element name="SearchResultRetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchByRegistrationNumberSearchResult" nillable="true" type="tns:SearchByRegistrationNumberSearchResult" />
+  <xs:complexType name="OrdinalSearchSearchResult">
+    <xs:sequence>
+      <xs:element name="SearchResultDetail" nillable="true" type="tns:OrdinalSearchSearchResultDetail" />
+      <xs:element name="SearchResultRetrievedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdinalSearchSearchResult" nillable="true" type="tns:OrdinalSearchSearchResult" />
+  <xs:complexType name="OrdinalSearchSearchResultDetail">
+    <xs:sequence>
+      <xs:element xmlns:q34="http://schemas.ppsr.gov.au/2011/04/data" name="OrdinalSearchResult" type="q34:OrdinalSearchResultType" />
+      <xs:element name="RegistrationOne" nillable="true" type="tns:OrdinalRegistrationDetail" />
+      <xs:element name="RegistrationTwo" nillable="true" type="tns:OrdinalRegistrationDetail" />
+      <xs:element minOccurs="0" name="TransitionalMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdinalSearchSearchResultDetail" nillable="true" type="tns:OrdinalSearchSearchResultDetail" />
+  <xs:complexType name="OrdinalRegistrationDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EventTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsAccessRestricted" nillable="true" type="xs:boolean" />
+      <xs:element name="IsArchived" type="xs:boolean" />
+      <xs:element name="IsRemoved" type="xs:boolean" />
+      <xs:element xmlns:q35="http://schemas.ppsr.gov.au/2011/04/data" name="RegistrationEvent" nillable="true" type="q35:RegistrationEvent" />
+      <xs:element minOccurs="0" name="RegistrarAlert" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdinalRegistrationDetail" nillable="true" type="tns:OrdinalRegistrationDetail" />
+  <xs:complexType name="SearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrdinalSearchSearchResult" nillable="true" type="tns:OrdinalSearchSearchResult" />
+      <xs:element xmlns:q36="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="SearchByGrantorAndEventDateRangeSearchResult" nillable="true" type="q36:SearchByGrantorSearchResult" />
+      <xs:element xmlns:q37="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="SearchByGrantorSearchResult" nillable="true" type="q37:SearchByGrantorSearchResult" />
+      <xs:element minOccurs="0" name="SearchByRegistrationNumberSearchResult" nillable="true" type="tns:SearchByRegistrationNumberSearchResult" />
+      <xs:element minOccurs="0" name="SearchBySerialNumberSearchResult" nillable="true" type="tns:SearchBySerialNumberSearchResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResult" nillable="true" type="tns:SearchResult" />
+  <xs:complexType name="AlertNotificationRequest">
+    <xs:sequence>
+      <xs:element name="AlertNotificationEndTime" type="xs:dateTime" />
+      <xs:element name="AlertNotificationRequestNumber" nillable="true" type="xs:string" />
+      <xs:element name="AlertNotificationStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="B2GAccountCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Organisations" nillable="true" type="tns:ArrayOfGrantorOrganisationWithVerificationStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlertNotificationRequest" nillable="true" type="tns:AlertNotificationRequest" />
+  <xs:complexType name="ArrayOfGrantorOrganisationWithVerificationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GrantorOrganisationWithVerificationStatus" nillable="true" type="tns:GrantorOrganisationWithVerificationStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrantorOrganisationWithVerificationStatus" nillable="true" type="tns:ArrayOfGrantorOrganisationWithVerificationStatus" />
+  <xs:complexType name="GrantorOrganisationWithVerificationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganisationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganisationNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q38="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="OrganisationNumberType" nillable="true" type="q38:OrganisationNumberType" />
+      <xs:element xmlns:q39="http://schemas.ppsr.gov.au/2011/04/data" minOccurs="0" name="OrganisationNumberVerificationStatus" nillable="true" type="q39:IdentifierVerificationStatusType" />
+      <xs:element minOccurs="0" name="OrganisationNumberVerificationDateTime" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantorOrganisationWithVerificationStatus" nillable="true" type="tns:GrantorOrganisationWithVerificationStatus" />
+  <xs:complexType name="RegistrarOverride">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeEffectiveDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegistrarAlert" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarOverride" nillable="true" type="tns:RegistrarOverride" />
+</xs:schema>
