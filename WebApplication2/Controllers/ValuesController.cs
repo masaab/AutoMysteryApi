@@ -13,8 +13,6 @@ namespace WebApplication2.Controllers
         // GET api/values
         string development = "Discovery";
 
-        private readonly Random _random = new Random();
-
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -23,7 +21,6 @@ namespace WebApplication2.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            //ChangeB2GPasswordResponseMessage message = null;
             try
             {
                 string url = "https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11";
