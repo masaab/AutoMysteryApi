@@ -26,6 +26,7 @@ namespace ClassLibrary2.CustomClasses
         {
             return new CustomCredentials(this);
         }
+
     }
 
     public class CustomSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -62,17 +63,16 @@ namespace ClassLibrary2.CustomClasses
             var nonce = GetSHA1String(phrase);
 
             string password = userToken.Password;
-            
-             writer.WriteRaw(string.Format(
-            "<{0}:UsernameToken u:Id=\"" + $"UsernameToken- {Guid.NewGuid()}" +
-            " xmlns:u=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">" +
+
+            writer.WriteRaw(string.Format(
+            "<{0}:UsernameToken u:Id=\"" + token.Id +
+            "\" xmlns:u=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">" +
             "<{0}:Username>" + userToken.UserName + "</{0}:Username>" +
             "<{0}:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">" +
             password + "</{0}:Password>" +
             "<{0}:Nonce EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\">" +
             nonce + "</{0}:Nonce>" +
-            "<u:Created>" + createdStr + "</u:Created></{0}:UsernameToken>"
-            , tokennamespace));
+            "<u:Created>" + createdStr + "</u:Created></{0}:UsernameToken>", tokennamespace));
         }
 
         protected string GetSHA1String(string phrase)
@@ -82,4 +82,6 @@ namespace ClassLibrary2.CustomClasses
             return Convert.ToBase64String(hashedDataBytes);
         }
     }
+
+    
 }
