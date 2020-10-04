@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IdentityModel.Tokens;
 using System.Security.Cryptography;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
@@ -69,14 +70,20 @@ namespace ClassLibrary2
         string username = "MUS258";
         string password = "YFU7C2EALZ7V";
         string development = "Discovery";
+        ClientCredentials crendentials = null;
+        public ClientMessageInspector(ClientCredentials credentials)
+        {
+            crendentials = credentials;
+        }
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
         {
+            UserNameSecurityToken token = new UserNameSecurityToken(username, password);
+            string pwd = token.Password;
             var nonce = getNonce();
-            //DateTime.Now.ToString("o");
-            var datetime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");//2009-11-02T10:22:42.866Z
+            var datetime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss:fffZ");
             string nonceToSend = Convert.ToBase64String(Encoding.UTF8.GetBytes(nonce));
 
-            SoapAuthHeader header = new SoapAuthHeader(string.Empty, username, password, nonceToSend, datetime);
+            SoapAuthHeader header = new SoapAuthHeader(string.Empty, username, pwd, nonceToSend, datetime);
             request.Headers.RemoveAt(0);
             request.Headers.Add(header);
             return request;
@@ -104,7 +111,8 @@ namespace ClassLibrary2
     {
         public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            clientRuntime.ClientMessageInspectors.Add(new ClientMessageInspector());
+            ClientCredentials creds = endpoint.Behaviors.Find<ClientCredentials>();
+            clientRuntime.ClientMessageInspectors.Add(new ClientMessageInspector(creds));
         }
         public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters)
         {

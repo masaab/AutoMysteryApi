@@ -22,8 +22,8 @@ namespace WebApplication2.Controllers
             ChangeB2GPasswordResponseMessage message = null;
             try
             {
-                //string url= https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11
                 string url = "https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11";
+              
                 string username = "MUS258", password = "YFU7C2EALZ7V";
                
                 var operationClient = PPSRService.CreatePPSROperationClient(url, username, password);
@@ -37,7 +37,7 @@ namespace WebApplication2.Controllers
                         ChangeB2GPasswordRequest = new ChangeB2GPasswordRequestType
                         {
                             Username = "MUS258",
-                            NewPassword = "TEAROFSUN"
+                            NewPassword = "TearOfSun1$"
                         }
                     });
                 }

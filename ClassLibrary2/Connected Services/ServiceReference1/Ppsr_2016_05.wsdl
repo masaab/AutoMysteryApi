@@ -7716,70 +7716,70 @@
   </wsdl:binding>
   <wsdl:service name="Ppsr_2016_05">
     <wsdl:port name="AlertNotificationSoap11" binding="tns:AlertNotificationSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="AlertNotificationSoap12" binding="tns:AlertNotificationSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="B2GMailboxSoap11" binding="tns:B2GMailboxSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="B2GMailboxSoap12" binding="tns:B2GMailboxSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="B2GMailboxSoap11Mtom" binding="tns:B2GMailboxSoap11Mtom">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom" />
     </wsdl:port>
     <wsdl:port name="B2GMailboxSoap12Mtom" binding="tns:B2GMailboxSoap12Mtom">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSoap11" binding="tns:CollateralRegistrationSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSoap12" binding="tns:CollateralRegistrationSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSoap11Mtom" binding="tns:CollateralRegistrationSoap11Mtom">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSoap12Mtom" binding="tns:CollateralRegistrationSoap12Mtom">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSearchSoap11" binding="tns:CollateralRegistrationSearchSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSearchSoap12" binding="tns:CollateralRegistrationSearchSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSearchSoap11Mtom" binding="tns:CollateralRegistrationSearchSoap11Mtom">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom" />
     </wsdl:port>
     <wsdl:port name="CollateralRegistrationSearchSoap12Mtom" binding="tns:CollateralRegistrationSearchSoap12Mtom">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom" />
     </wsdl:port>
     <wsdl:port name="RegisterOperationsSoap11" binding="tns:RegisterOperationsSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="RegisterOperationsSoap12" binding="tns:RegisterOperationsSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="ReportSoap11" binding="tns:ReportSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="ReportSoap12" binding="tns:ReportSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12" />
     </wsdl:port>
     <wsdl:port name="ReportSoap11Mtom" binding="tns:ReportSoap11Mtom">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom" />
     </wsdl:port>
     <wsdl:port name="ReportSoap12Mtom" binding="tns:ReportSoap12Mtom">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom" />
     </wsdl:port>
     <wsdl:port name="SecuredPartyGroupSoap11" binding="tns:SecuredPartyGroupSoap11">
-      <soap:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11" />
+      <soap:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11" />
     </wsdl:port>
     <wsdl:port name="SecuredPartyGroupSoap12" binding="tns:SecuredPartyGroupSoap12">
-      <soap12:address location="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12" />
+      <soap12:address location="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

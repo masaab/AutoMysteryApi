@@ -59,6 +59,8 @@ namespace ClassLibrary2
             var transport = new HttpsTransportBindingElement();
              transport.MaxReceivedMessageSize = 2000000; // 20 megs
 
+            binding.Name = "RegisterOperationsSoap11";
+
             binding.Elements.Add(security);
             binding.Elements.Add(encoding);
             binding.Elements.Add(transport);
@@ -69,7 +71,8 @@ namespace ClassLibrary2
             // to use full client credential with Nonce uncomment this code:
             // it looks like this might not be required - the service seems to work without it
             client.Endpoint.Behaviors.Remove<System.ServiceModel.Description.ClientCredentials>();
-            client.Endpoint.Behaviors.Add(new CustomCredentials());
+            client.Endpoint.Behaviors.Add(new CustomEndpointBehavior());
+            //client.Endpoint.Behaviors.Add(new CustomCredentials());
 
             client.ClientCredentials.UserName.UserName = username;
             client.ClientCredentials.UserName.Password = password;

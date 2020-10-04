@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="B5olkNtCtCRal5RHXXZgdtr/D67AR+rJjMLQCbxDnuI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="9ke8QwyY1qA9pezKokOGItg9P+CgTZXBZHLUxdhQ3BQ=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AlertNotificationSoap11">
       <properties>
@@ -764,115 +764,6 @@
         </property>
       </properties>
     </bindingConfiguration>
-    <bindingConfiguration bindingType="basicHttpBinding" name="RegisterOperationsSoap11">
-      <properties>
-        <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>RegisterOperationsSoap11</serializedValue>
-        </property>
-        <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/openTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/receiveTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/sendTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/allowCookies" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/bypassProxyOnLocal" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/hostNameComparisonMode" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HostNameComparisonMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>StrongWildcard</serializedValue>
-        </property>
-        <property path="/maxBufferPoolSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/maxBufferSize" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>65536</serializedValue>
-        </property>
-        <property path="/maxReceivedMessageSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/proxyAddress" isComplexType="false" isExplicitlyDefined="false" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/readerQuotas" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</serializedValue>
-        </property>
-        <property path="/readerQuotas/maxDepth" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>0</serializedValue>
-        </property>
-        <property path="/readerQuotas/maxStringContentLength" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>0</serializedValue>
-        </property>
-        <property path="/readerQuotas/maxArrayLength" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>0</serializedValue>
-        </property>
-        <property path="/readerQuotas/maxBytesPerRead" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>0</serializedValue>
-        </property>
-        <property path="/readerQuotas/maxNameTableCharCount" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>0</serializedValue>
-        </property>
-        <property path="/textEncoding" isComplexType="false" isExplicitlyDefined="false" clrType="System.Text.Encoding, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.Text.UTF8Encoding</serializedValue>
-        </property>
-        <property path="/transferMode" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.TransferMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Buffered</serializedValue>
-        </property>
-        <property path="/useDefaultWebProxy" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/messageEncoding" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.WSMessageEncoding, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Text</serializedValue>
-        </property>
-        <property path="/security" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.ServiceModel.Configuration.BasicHttpSecurityElement</serializedValue>
-        </property>
-        <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.BasicHttpSecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TransportWithMessageCredential</serializedValue>
-        </property>
-        <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.HttpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.ServiceModel.Configuration.HttpTransportSecurityElement</serializedValue>
-        </property>
-        <property path="/security/transport/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HttpClientCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>None</serializedValue>
-        </property>
-        <property path="/security/transport/proxyCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HttpProxyCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>None</serializedValue>
-        </property>
-        <property path="/security/transport/extendedProtectionPolicy" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement</serializedValue>
-        </property>
-        <property path="/security/transport/extendedProtectionPolicy/policyEnforcement" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.PolicyEnforcement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Never</serializedValue>
-        </property>
-        <property path="/security/transport/extendedProtectionPolicy/protectionScenario" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.ProtectionScenario, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TransportSelected</serializedValue>
-        </property>
-        <property path="/security/transport/extendedProtectionPolicy/customServiceNames" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>(Collection)</serializedValue>
-        </property>
-        <property path="/security/transport/realm" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue />
-        </property>
-        <property path="/security/message" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpMessageSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.ServiceModel.Configuration.BasicHttpMessageSecurityElement</serializedValue>
-        </property>
-        <property path="/security/message/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.BasicHttpMessageCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>UserName</serializedValue>
-        </property>
-        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Default</serializedValue>
-        </property>
-      </properties>
-    </bindingConfiguration>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReportSoap11">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1095,6 +986,115 @@
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>SecuredPartyGroupSoap11</serializedValue>
+        </property>
+        <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/openTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/receiveTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/sendTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/allowCookies" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/bypassProxyOnLocal" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/hostNameComparisonMode" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HostNameComparisonMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>StrongWildcard</serializedValue>
+        </property>
+        <property path="/maxBufferPoolSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/maxBufferSize" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>65536</serializedValue>
+        </property>
+        <property path="/maxReceivedMessageSize" isComplexType="false" isExplicitlyDefined="true" clrType="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/proxyAddress" isComplexType="false" isExplicitlyDefined="false" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/readerQuotas" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxDepth" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>0</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxStringContentLength" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>0</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxArrayLength" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>0</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxBytesPerRead" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>0</serializedValue>
+        </property>
+        <property path="/readerQuotas/maxNameTableCharCount" isComplexType="false" isExplicitlyDefined="false" clrType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>0</serializedValue>
+        </property>
+        <property path="/textEncoding" isComplexType="false" isExplicitlyDefined="false" clrType="System.Text.Encoding, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.Text.UTF8Encoding</serializedValue>
+        </property>
+        <property path="/transferMode" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.TransferMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Buffered</serializedValue>
+        </property>
+        <property path="/useDefaultWebProxy" isComplexType="false" isExplicitlyDefined="true" clrType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/messageEncoding" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.WSMessageEncoding, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Text</serializedValue>
+        </property>
+        <property path="/security" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.BasicHttpSecurityElement</serializedValue>
+        </property>
+        <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.BasicHttpSecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>TransportWithMessageCredential</serializedValue>
+        </property>
+        <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.HttpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.HttpTransportSecurityElement</serializedValue>
+        </property>
+        <property path="/security/transport/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HttpClientCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>None</serializedValue>
+        </property>
+        <property path="/security/transport/proxyCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.HttpProxyCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>None</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.Security.Authentication.ExtendedProtection.Configuration.ExtendedProtectionPolicyElement</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/policyEnforcement" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.PolicyEnforcement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Never</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/protectionScenario" isComplexType="false" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.ProtectionScenario, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>TransportSelected</serializedValue>
+        </property>
+        <property path="/security/transport/extendedProtectionPolicy/customServiceNames" isComplexType="true" isExplicitlyDefined="false" clrType="System.Security.Authentication.ExtendedProtection.Configuration.ServiceNameElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>(Collection)</serializedValue>
+        </property>
+        <property path="/security/transport/realm" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue />
+        </property>
+        <property path="/security/message" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.BasicHttpMessageSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>System.ServiceModel.Configuration.BasicHttpMessageSecurityElement</serializedValue>
+        </property>
+        <property path="/security/message/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.BasicHttpMessageCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>UserName</serializedValue>
+        </property>
+        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Default</serializedValue>
+        </property>
+      </properties>
+    </bindingConfiguration>
+    <bindingConfiguration bindingType="basicHttpBinding" name="RegisterOperationsSoap11">
+      <properties>
+        <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>RegisterOperationsSoap11</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9090,10 +9090,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AlertNotificationSoap11" contract="ServiceReference1.AlertNotificationService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11" bindingConfiguration="AlertNotificationSoap11">
+    <endpoint name="AlertNotificationSoap11" contract="ServiceReference1.AlertNotificationService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11" bindingConfiguration="AlertNotificationSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9175,10 +9175,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="AlertNotificationSoap12" contract="ServiceReference1.AlertNotificationService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12" bindingConfiguration="AlertNotificationSoap12">
+    <endpoint name="AlertNotificationSoap12" contract="ServiceReference1.AlertNotificationService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12" bindingConfiguration="AlertNotificationSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/AlertNotification.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9260,10 +9260,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="B2GMailboxSoap11" contract="ServiceReference1.B2GMailboxService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11" bindingConfiguration="B2GMailboxSoap11">
+    <endpoint name="B2GMailboxSoap11" contract="ServiceReference1.B2GMailboxService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11" bindingConfiguration="B2GMailboxSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9345,10 +9345,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="B2GMailboxSoap12" contract="ServiceReference1.B2GMailboxService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12" bindingConfiguration="B2GMailboxSoap12">
+    <endpoint name="B2GMailboxSoap12" contract="ServiceReference1.B2GMailboxService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12" bindingConfiguration="B2GMailboxSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9430,10 +9430,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="B2GMailboxSoap11Mtom" contract="ServiceReference1.B2GMailboxService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom" bindingConfiguration="B2GMailboxSoap11Mtom">
+    <endpoint name="B2GMailboxSoap11Mtom" contract="ServiceReference1.B2GMailboxService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom" bindingConfiguration="B2GMailboxSoap11Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap11mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9515,10 +9515,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="B2GMailboxSoap12Mtom" contract="ServiceReference1.B2GMailboxService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom" bindingConfiguration="B2GMailboxSoap12Mtom">
+    <endpoint name="B2GMailboxSoap12Mtom" contract="ServiceReference1.B2GMailboxService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom" bindingConfiguration="B2GMailboxSoap12Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/B2GMailbox.svc/soap12mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9600,10 +9600,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSoap11" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11" bindingConfiguration="CollateralRegistrationSoap11">
+    <endpoint name="CollateralRegistrationSoap11" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11" bindingConfiguration="CollateralRegistrationSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9685,10 +9685,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSoap12" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12" bindingConfiguration="CollateralRegistrationSoap12">
+    <endpoint name="CollateralRegistrationSoap12" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12" bindingConfiguration="CollateralRegistrationSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9770,10 +9770,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSoap11Mtom" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom" bindingConfiguration="CollateralRegistrationSoap11Mtom">
+    <endpoint name="CollateralRegistrationSoap11Mtom" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom" bindingConfiguration="CollateralRegistrationSoap11Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap11mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9855,10 +9855,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSoap12Mtom" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom" bindingConfiguration="CollateralRegistrationSoap12Mtom">
+    <endpoint name="CollateralRegistrationSoap12Mtom" contract="ServiceReference1.CollateralRegistrationService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom" bindingConfiguration="CollateralRegistrationSoap12Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistration.svc/soap12mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -9940,10 +9940,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSearchSoap11" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11" bindingConfiguration="CollateralRegistrationSearchSoap11">
+    <endpoint name="CollateralRegistrationSearchSoap11" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11" bindingConfiguration="CollateralRegistrationSearchSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10025,10 +10025,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSearchSoap12" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12" bindingConfiguration="CollateralRegistrationSearchSoap12">
+    <endpoint name="CollateralRegistrationSearchSoap12" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12" bindingConfiguration="CollateralRegistrationSearchSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10110,10 +10110,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSearchSoap11Mtom" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom" bindingConfiguration="CollateralRegistrationSearchSoap11Mtom">
+    <endpoint name="CollateralRegistrationSearchSoap11Mtom" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom" bindingConfiguration="CollateralRegistrationSearchSoap11Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10195,10 +10195,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="CollateralRegistrationSearchSoap12Mtom" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom" bindingConfiguration="CollateralRegistrationSearchSoap12Mtom">
+    <endpoint name="CollateralRegistrationSearchSoap12Mtom" contract="ServiceReference1.CollateralRegistrationSearchService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom" bindingConfiguration="CollateralRegistrationSearchSoap12Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap12mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10280,10 +10280,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="RegisterOperationsSoap11" contract="ServiceReference1.RegisterOperationsService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11" bindingConfiguration="RegisterOperationsSoap11">
+    <endpoint name="RegisterOperationsSoap11" contract="ServiceReference1.RegisterOperationsService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11" bindingConfiguration="RegisterOperationsSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10365,10 +10365,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="RegisterOperationsSoap12" contract="ServiceReference1.RegisterOperationsService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12" bindingConfiguration="RegisterOperationsSoap12">
+    <endpoint name="RegisterOperationsSoap12" contract="ServiceReference1.RegisterOperationsService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12" bindingConfiguration="RegisterOperationsSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/RegisterOperations.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10450,10 +10450,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="ReportSoap11" contract="ServiceReference1.Report2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11" bindingConfiguration="ReportSoap11">
+    <endpoint name="ReportSoap11" contract="ServiceReference1.Report2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11" bindingConfiguration="ReportSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10535,10 +10535,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="ReportSoap12" contract="ServiceReference1.Report2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12" bindingConfiguration="ReportSoap12">
+    <endpoint name="ReportSoap12" contract="ServiceReference1.Report2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12" bindingConfiguration="ReportSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10620,10 +10620,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="ReportSoap11Mtom" contract="ServiceReference1.Report2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom" bindingConfiguration="ReportSoap11Mtom">
+    <endpoint name="ReportSoap11Mtom" contract="ServiceReference1.Report2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom" bindingConfiguration="ReportSoap11Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap11mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10705,10 +10705,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="ReportSoap12Mtom" contract="ServiceReference1.Report2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom" bindingConfiguration="ReportSoap12Mtom">
+    <endpoint name="ReportSoap12Mtom" contract="ServiceReference1.Report2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom" bindingConfiguration="ReportSoap12Mtom">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/Report.svc/soap12mtom</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10790,10 +10790,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="SecuredPartyGroupSoap11" contract="ServiceReference1.SecuredPartyGroupService2016" bindingType="basicHttpBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11" bindingConfiguration="SecuredPartyGroupSoap11">
+    <endpoint name="SecuredPartyGroupSoap11" contract="ServiceReference1.SecuredPartyGroupService2016" bindingType="basicHttpBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11" bindingConfiguration="SecuredPartyGroupSoap11">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap11</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -10875,10 +10875,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="SecuredPartyGroupSoap12" contract="ServiceReference1.SecuredPartyGroupService2016" bindingType="customBinding" address="https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12" bindingConfiguration="SecuredPartyGroupSoap12">
+    <endpoint name="SecuredPartyGroupSoap12" contract="ServiceReference1.SecuredPartyGroupService2016" bindingType="customBinding" address="https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12" bindingConfiguration="SecuredPartyGroupSoap12">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://b2g.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12</serializedValue>
+          <serializedValue>https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/SecuredPartyGroup.svc/soap12</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
