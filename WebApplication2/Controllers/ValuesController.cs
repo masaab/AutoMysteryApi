@@ -13,8 +13,6 @@ namespace WebApplication2.Controllers
         // GET api/values
         string development = "Discovery";
 
-        private readonly Random _random = new Random();
-
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
