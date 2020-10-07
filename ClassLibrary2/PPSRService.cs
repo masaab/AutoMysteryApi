@@ -1,5 +1,6 @@
 ﻿using ClassLibrary2.CustomClasses;
 using ClassLibrary2.ServiceReference1;
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Configuration;
@@ -75,6 +76,11 @@ namespace ClassLibrary2
             binding.Elements.Add(security);
             binding.Elements.Add(encoding);
             binding.Elements.Add(transport);
+
+            binding.OpenTimeout = TimeSpan.FromSeconds(60);
+            binding.CloseTimeout = TimeSpan.FromSeconds(60);
+            binding.SendTimeout = TimeSpan.FromSeconds(60);
+            binding.ReceiveTimeout = TimeSpan.FromSeconds(60);
 
             CollateralRegistrationSearchService2016Client client = new CollateralRegistrationSearchService2016Client(binding,
                 new EndpointAddress(url));

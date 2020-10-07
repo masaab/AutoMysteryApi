@@ -3,8 +3,13 @@ using ClassLibrary2.ServiceReference1;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.ServiceModel;
+using System.Text;
 using System.Web.Http;
 
 namespace WebApplication2.Controllers
@@ -42,16 +47,18 @@ namespace WebApplication2.Controllers
                         {
                             CustomersRequestMessageId = Guid.NewGuid().ToString(),
                             SearchCriteria = new SearchBySerialNumberSearchCriteria
-                            { 
+                            {
                                 IncludeCurrent = true,
                                 SerialNumberType = SerialNumberSearchCriteriaType.VIN,
                                 SerialNumber = id//"JT752EP9100474959"//"JS1SP46A000504266"
                             }
                         }
                     });
-                   // return JsonConvert.SerializeObject(message);
+
+
+                    // return JsonConvert.SerializeObject(message);
                 }
-            
+
                 using (new OperationContextScope((IClientChannel)operationChannel))
                 {
                     dsd = operationChannel.RequestSearchCertificate(new RequestSearchCertificateRequestMessage
@@ -64,8 +71,31 @@ namespace WebApplication2.Controllers
                             RegistrationNumber = message.SearchBySerialNumberResponse.SearchResult.ResultDetails.Last().RegistrationDetail.RegistrationNumber,
                             ChangeNumber = message.SearchBySerialNumberResponse.SearchResult.ResultDetails.Last().RegistrationDetail.ChangeNumber
                         }
-                    }) ;
+                    });
+
+
+                    //sb.AppendLine(JsonConvert.SerializeObject(dsd));
+                    //sb.AppendLine();
+                    return JsonConvert.SerializeObject(dsd);
                 }
+
+            }
+            catch (Exception ex)
+            {
+                return $"MESSAGE: {ex?.Message}  STACETRACE: {ex?.StackTrace}  SOURCE: {ex?.Source}  INNER EXCEPTION: {ex?.InnerException?.ToString()}";
+            }
+        }
+
+        [HttpGet]
+        [Route("download/{searchCertificateNumber}")]
+        public IHttpActionResult Download(string searchCertificateNumber)
+        {
+            try
+            {
+                string urlMTOM = "https://b2g-disc.ppsr.gov.au/PpsrB2GService/2016/05/CollateralRegistrationSearch.svc/soap11mtom";
+                string username = "MUS258", password = "TearOfSun1$";
+
+                RetrieveSearchCertificateResponseMessage ee = null;
 
                 //Create a new Client with new URL which uses MTOM
                 var operationClient1 = PPSRService.CreatePPSRClient1(urlMTOM, username, password);
@@ -78,19 +108,37 @@ namespace WebApplication2.Controllers
                         RetrieveSearchCertificateRequest = new RetrieveSearchCertificateRequestType
                         {
                             CustomersRequestMessageId = Guid.NewGuid().ToString(),
-                            SearchCertificateNumber = dsd.RequestSearchCertificateResponse.SearchCertificateNumber
+                            SearchCertificateNumber = searchCertificateNumber,
                         }
                     });
                 }
-                return JsonConvert.SerializeObject(ee);
+
+                var res = ee?.RetrieveSearchCertificateResponse;
+
+                if (res?.SearchCertificateFile != null)
+                {
+                    HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new StreamContent(new MemoryStream(res.SearchCertificateFile)),
+                    };
+
+                    result.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+                    {
+                        FileName = res.SearchCertificateFileName ?? "Test.pdf"
+                    };
+
+                    result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+                    return ResponseMessage(result);
+                }
+
+                return Ok(res);
             }
             catch (Exception ex)
             {
-                return $"MESSAGE: {ex?.Message}  STACETRACE: {ex?.StackTrace}  SOURCE: {ex?.Source}  INNER EXCEPTION: {ex?.InnerException?.ToString()}";
+                throw;
             }
         }
-
-       
 
         //public string Get(int id)
         //{
