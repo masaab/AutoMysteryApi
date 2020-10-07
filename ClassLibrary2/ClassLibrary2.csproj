@@ -58,7 +58,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Connected Services\ServiceReference1\ClassLibrary2.ServiceReference1.AmendAlertNotificationResponseMessage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
